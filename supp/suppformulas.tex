@@ -1,0 +1,108 @@
+\chapter{Formulas}
+
+\textit{From STAT2003 (thanks Nick if ur reading this because this is just all rewritten from your compilation). Under construction.}
+
+\begin{enumerate}
+    \item \(\mathbb{P}(A^c)=1-\mathbb{P}(A)\)
+    \item Inclusion-exclusion (2 sets): \(\mathbb{P}(A\cup B)=\mathbb{P}(A)+\mathbb{P}(B)\mathbb{P}(A\cap B)\)
+    \item De Morgan’s laws: \(\mathbb{P}(A^c\cup B^c)=\mathbb{P}(A\cap B)^c, \mathbb{P}(A^c\cap B^c)=\mathbb{P}(A\cup B)^c\)
+    \item Conditional probability: \(\mathbb{P}(A|B)=\mathbb{P}(A\cap B)\mathbb{P}(B)\)
+    \item Law of total probability: \(\mathbb{P}(A)=\sum_{i=1}^n \mathbb{P}(A|B_i)\mathbb{P}(B_i),\) given \(B_1,...,B_n\) is a partition of \(\Omega\)
+    \item Bayes’ Rule: \(\mathbb{P}(B_j|A)=\mathbb{P}(A|B_j)\mathbb{P}(B_j)Pni=1P(A|B_i)\mathbb{P}(B_i)\)
+    \item Sum rule: \(\mathbb{P}(A)=\sum_{i=1}^n P(A\cap B_i)\)
+    \item Product rule: \(\mathbb{P}(A_1... A_n)=\mathbb{P}(A_1)\mathbb{P}(A_2|A_1)...P(A_n|A_1...A_{n-1})\)
+    \item \(A_i\) independent \(\iff\) \(\forall k\) and any choice of \(i_1,...,i_k\), \(\mathbb{P}(A_{i_1} \cap A_{i_2} \cap... \cap A_{i_k})=\mathbb{P}(A_{i_1})\mathbb{P}(A_{i_2})...\mathbb{P}(A_{i_k})\)
+    \item CDF of \(X\): \(F(x)=\mathbb{P}(X\leq x)=\int_{-\infty}^{x} f(u)du, x\in \mathbb{R}\)
+    \item CDF properties: \(\underset{x\to\infty}{\lim} F(x)=1, \underset{x\to-\infty}{\lim} F(x)=0, \mathbb{P}(a<X\leq b)=F(b)- F(a) = \int_b^a f(u)du\)
+    \item Pdf of \(X\): \(f(x)=F'(x), \int_{-\infty}^{\infty} f(x)dx=1\)
+    \item Pmf of \(X\): \(f(x)=\mathbb{P}(X=x)\)
+    \item For discrete \(X\), \(\mathbb{P}(X\in B)= \sum_{X\in B} \mathbb{P}(X=x)\), i.e., \(\mathbb{P}(X={1,2})=\sum_{x=1}^2 \mathbb{P}(X=x)\)
+    \item Expectation (discrete): \(\mathbb{E}[g(X)] =\sum_x g(x)\mathbb{P}(X=x)=\sum_x g(x) g(x)f(x)\)
+    \item Expectation (continuous): \(\mathbb{E}[g(X)] = \int_{-\infty}^{\infty} g(x)f(x)dx\)
+\end{enumerate}
+
+% Properties of Expectation, Variance and Covariance
+
+% \mathbb{E}[aX+b]=aE[X]+b
+% \mathbb{E}[h(X)+g(X)] =\mathbb{E}[h(X)] +\mathbb{E}[g(X)]
+% X, Yindependent =)EXY=EXEY
+% \mathbb{E}[Y]=\mathbb{E}[\mathbb{E}[Y|X]] - Tower property
+% \mathbb{E}[Yg(X)|X]=g(X)\mathbb{E}[Y|X]
+% \text{Var}(X)=\mathbb{E}(XEX)2=EX2(EX)2
+% \text{Var}(aX+b)=a2\text{Var}(X)
+% \text{Var}(X+Y) = \text{Var}(X) + \text{Var}(Y) + 2Cov(X, Y)
+% \text{Cov}(X, Y)=\mathbb{E}(XEX)(YEY)=EXYEXEY
+% \text{Cov}(aX+bY, cU+dV)=acCov(X, U)+adCov(X, V)+bcCov(Y, U)+bdCov(Y, V)
+% \text{Cov}(X, X) = \text{Var}(X)
+% \text{Cov}(X, Y)=\text{Cov}(Y, X)
+% \text{Cov}(X+a, Y+b)=\text{Cov}(X, Y)
+% XandYindependent()\text{Cov}(X, Y)=016.
+
+\begin{tabular}{ |c|c|c|c|c|c|  }
+    \hline
+    \multicolumn{6}{|c|}{Important discrete distributions} \\
+    \hline
+    Distribution & pmf & \(x\in\) & \(\mathbb{E}(X)\)& \(\text{Var}(X)\) & PGF\\
+    \hline
+    Ber\((p)\)  & \(p^x(1-p)^{1-x}\) & \(\{0,1\}\) & \(p\) & \(p(1-p)\) & 1 - p + zp\\
+    Bin\((n,p)\)  & \(\binom{n}{x} p^x(1-p)^{n-x}\) & \(\{0,1, ..., n\}\) & \(np\) & \(np(1-p)\) & \((1 - p + zp)^n\)\\
+    Geom\((p)\) & \(p(1-p)^{x-1}\) & \(\{1,2, ...\}\) & \(\frac{1}{p}\)& \(\frac{1-p}{p^2}\) & \(\frac{zp}{1-z(1-p)}\)\\
+    Hyp\((n,r,N)\) & \(\frac{\binom{r}{x}\binom{N-r}{n-x}}{\binom{N}{n}}\) & \(\{0,1,...\}\) & \(n\frac{r}{N}\)& \(n\frac{r}{N} \frac{(N-r)}{N} \frac{N-n}{N-1}\) & \\
+    \hline
+\end{tabular}
+
+\begin{tabular}{ |c|c|c|c|c|c|c|  }
+    \hline
+    \multicolumn{7}{|c|}{Important continuous distributions} \\
+    \hline
+    Distribution & pdf & cdf & \(x\in\) & \(\mathbb{E}(X)\)& \(\text{Var}(X)\) & PGF/MGF\\
+    \hline
+    U\([a,b]\) & \(\frac{1}{b-a}\) & \(\frac{x-a}{b-a}\) & \([a,b]\) & \(\frac{a+b}{2}\) & \(\frac{\left(a-b\right)^2}{12}\) & \(\frac{e^{bs}-e^{as}}{s(b-a)}\)\\
+    % Beta & \(B(m_1,m_2)\)  & \(\binom{n}{x} p^x(1-p)^{n-x}\) & \(\{0,1, ..., n\}\) & \(np\) & \(np(1-p)\) & \((1 - p + zp)^n\)\\
+    Exp\((\lambda)\) & \(\lambda e^{-\lambda x}\) & \(1 - e^{\lambda x}\)& \(\mathbb{R}^+\) & \(\frac{1}{\lambda}\)& \(\frac{1}{\lambda^2}\) & \(\frac{\lambda}{\lambda - s}, s<\lambda\)\\
+    \(\mathcal{N}(\mu,\sigma^2)\) & \(\frac{1}{\sqrt{2\pi\sigma^2}}\exp\left(-\frac{1}{2}\frac{(x-\mu)^2}{\sigma^2}\right)\) & & \(\mathbb{R}\) & \(\mu\)& \(\sigma^2\) & \(e^{s\mu+s^2\sigma^2/2}, s\in\mathbb{R}\)\\
+    \hline
+\end{tabular}
+   
+
+% \begin{tabular}{ |c|c||c|c|c|c|c|  }
+%     \hline
+%     \multicolumn{7}{|c|}{Some probability distributions} \\
+%     \hline
+%     Distribution & Notation & pmf/pdf & \(x\in\) & \(\mathbb{E}(X)\)& \(\text{Var}(X)\) & PGF/MGF\\
+%     \hline
+%     Uniform & U\([a,b]\) & \(\frac{1}{b-a}\) & \([a,b]\) & \(\frac{a+b}{2}\) & \(\frac{\left(a-b\right)^2}{12}\) & \(\frac{e^{bs}-e^{as}}{s(b-a)}\)\\
+%     % Beta & \(B(m_1,m_2)\)  & \(\binom{n}{x} p^x(1-p)^{n-x}\) & \(\{0,1, ..., n\}\) & \(np\) & \(np(1-p)\) & \((1 - p + zp)^n\)\\
+%     Exponential & Exp\((\lambda)\) & \(\lambda e^{-\lambda x}\) & \(\mathbb{R}^+\) & \(\frac{1}{\lambda}\)& \(\frac{1}{\lambda^2}\) & \(\frac{\lambda}{\lambda - s}, s<\lambda\)\\
+%     Normal, Gaussian & \(\mathcal{N}(\mu,\sigma^2)\) & \(\frac{1}{\sqrt{2\pi\sigma^2}}\exp\left(-\frac{1}{2}\frac{(x-\mu)^2}{\sigma^2}\right)\) & \(\mathbb{R}\) & \(\mu\)& \(\sigma^2\) & \(e^{s\mu+s^2\sigma^2/2}, s\in\mathbb{R}\)\\
+%     % Gamma & \(\mathcal{N}(\mu,\sigma^2)\) & \(\frac{1}{\sqrt{2\pi\sigma^2}}\exp\left(-\frac{1}{2}\frac{(x-\mu)^2}{\sigma^2}\right)\) & \(\mathbb{R}\) & \(\mu\)& \(\sigma^2\) & \(e^{s\mu+s^2\sigma^2/2}, s\in\mathbb{R}\)\\
+%     % Chi-squared & \(\mathcal{N}(\mu,\sigma^2)\) & \(\frac{1}{\sqrt{2\pi\sigma^2}}\exp\left(-\frac{1}{2}\frac{(x-\mu)^2}{\sigma^2}\right)\) & \(\mathbb{R}\) & \(\mu\)& \(\sigma^2\) & \(e^{s\mu+s^2\sigma^2/2}, s\in\mathbb{R}\)\\
+%     % \(F\)- & \(\mathcal{N}(\mu,\sigma^2)\) & \(\frac{1}{\sqrt{2\pi\sigma^2}}\exp\left(-\frac{1}{2}\frac{(x-\mu)^2}{\sigma^2}\right)\) & \(\mathbb{R}\) & \(\mu\)& \(\sigma^2\) & \(e^{s\mu+s^2\sigma^2/2}, s\in\mathbb{R}\)\\
+%     % \(t\)- & \(\mathcal{N}(\mu,\sigma^2)\) & \(\frac{1}{\sqrt{2\pi\sigma^2}}\exp\left(-\frac{1}{2}\frac{(x-\mu)^2}{\sigma^2}\right)\) & \(\mathbb{R}\) & \(\mu\)& \(\sigma^2\) & \(e^{s\mu+s^2\sigma^2/2}, s\in\mathbb{R}\)\\
+%     \hline
+% \end{tabular}
+
+% Important discrete distributions
+% Distributionpmfx2EX \text{Var}(X)pgf
+% px(1p)1x{0,1}pp(1p)1p+zpBin(n, \mathbb{P})nxpx(1p)nx{0,1,...,n}npnp(1p)(1p+zp)nPoi()exx!{0,1,...}\mathbb{E}(1z)Geom(\mathbb{P})\mathbb{P}(1p)x1{1,2,...}1p1pp2zp1z(1p)Hyp(n, r, N)(rx)(Nrnx)(Nn){0,...,n}nrNnrN(Nr)NNnN120
+
+
+% Important continuous distributions
+% Distributionpdfcdfx2\mathbb{E}X\text{Var}(X)mgfU[a, b]1baxaba[a, b]a+b2(ba)212ebseass(ba)Exp()ex1exR+112s,s<Gamma(↵, )↵x↵1ex(↵)R+↵↵2⇣s⌘↵,s<N(μ, 2)1p2⇡e12(xμ)2Rμ2esμ+s22/2,s2R18.\mathbb{P}robability generating functionsG(z)=\mathbb{E}zx=\mathbb{P}1x=0zx\mathbb{P}(X=x) and\mathbb{P}(X=x)=1x!G(x)(0)19.Properties of pgf,\mathbb{E}X=G0(1), \text{Var}(X)=G00(1) +G0(1)(G0(1))220.Moment generating functions,MX(s)=\mathbb{E}esX,MX(s)=\mathbb{P}1i=1esxif(xi)=R11esxfX(x)dx21.Properties of mgf,\mathbb{E}Xn=M(n)(0),\text{Var}(X)=M00(0)(M0(0))2,MX+Y(t)=MX(t)MY(t),8t,ifX, Yindependent.22.Inverse transform method, to generateXwith cdfF,drawU⇠U(0,1) and setX=F1(U)23.Acceptance rejection method, to generateZ⇠f, generateX⇠gandY⇠U(0,Cg(X)), ifYf(x), returnZ=X, otherwise return to step 1.24.Eciency of acceptance rejection method,\mathbb{P}((X, Y) is accepted) =1C25.Linear transformation,fZ(z)=fX(A1z)|A|26.General transformation,z=g(x),fZ(z)=fX(x)|det(Jx(g))|=fX(x)|det(Jx(g1))|, for 1d,Jx(g)=g0(x)27.\mathbb{P}((X, Y)2B)=RRBfX,Y(x, y)dxdy28.Marginal from joint pdf,fX(x)=R1y=1fX,Y(x, y)dy29.Conditional pmf/pdf,fY|X(y|x)=fX,Y(x,y)fX(x),y2R30.Independent random variables (discrete),\mathbb{P}(X1=x1,...,Xn=xn)=Qnk=1\mathbb{P}(Xk=xk)31.Independent random variables (continuous),fX1,...,Xn(x1,...,xn)=Qnk=1fXk(xk)32.\mathbb{E}(g(X1,...,Xn)) =\mathbb{P}x1···\mathbb{P}xng(x1,...,xn)f(x1,...,xn)=R11R11g(x1,...,xn)f(x1,...,xn)dx1...dxn33.\mathbb{E}[Y|X=x]=\mathbb{P}yy\mathbb{P}(Y=y|X=x)=R11yfY|X(y|x)dy34.Referring to 33, if we instead have\mathbb{E}[Y|X], replacexwithXin the final answer.35.Markov inequality,\mathbb{P}(Xx)\mathbb{E}Xx36.Memoryless property (Exp and Geom distribution):\mathbb{P}(X>s+t|X>s)=\mathbb{P}(X>t),8s, t37.Xi⇠(μi,2i),i=1,2,...,n(independent),a+\mathbb{P}ni=1biXi⇠Na+\mathbb{P}ni=1biμi,\mathbb{P}ni=1b2i_2i38.Pdf of the multivariate normal distribution,fZ(z)=1p(2⇡)n|⌃|e12(zμ)T⌃1(zμ), ⌃covariance matrix,μmean vector.39.IfXis a column vector with independentN(0,1) components, andBis a matrix with ⌃=BBT(such aBcan be found), thenZ=μ+BXhas a multivariate normal distribution with mean vectorμand covariancematrix⌃.40.IfXhas expectation vectorμXand covariance matrix⌃XandZ=AX,thenμZ=AμXand⌃Z=A⌃XAT41.Law of large numbers, for largen,1n\mathbb{P}ni=1Xi!\mathbb{E}[Xi]21
+
+
+% Weak law of large numbers,8✏>0,\underset{x\to\infty}{\lim}n!1\mathbb{P}✓Snnμ✏◆=0
+% Strong law of large numbers,\mathbb{P}✓\underset{x\to\infty}{\lim}n!1Snn=μ◆=
+% Central \underset{x\to\infty}{\lim}it theorem, for largen,nXi=1Xi=Snapprox⇠N(\mathbb{E}[Sn],\text{Var}(Sn)) =N(n\mathbb{E}[Xi],n\text{Var}(Xi))\underset{x\to\infty}{\lim}n!1\mathbb{P}✓Snnμpnx◆=(x)
+% Normal approximation to Binomial, IfX⇠Bin(n, \mathbb{P}), then, for largen,\mathbb{P}(Xk)⇡\mathbb{P}(Yk), whereY⇠N(np, np(1p))
+% n-step probabilities,\mathbb{P}(Xn=j|X0=i)=\mathbb{P}n(i, j)
+% Limiting distribution,⇡=⇡\mathbb{P},⇡j0,\mathbb{P}j⇡j= 1, \underset{x\to\infty}{\lim}n!1\mathbb{P}n(i, j)=⇡j
+% Structure/system function (series, parallel),s='(x)=Qni=1xi,1(1x1)···(1xn)
+% Reliability function,r(\mathbb{P})=\mathbb{E}'(X)
+% CDF of system lifetime,F(t)=1r(1F1(t),...,1Fn(t))
+% Expected lifetime,\mathbb{E}T=R10R(t)dt=R101F(t)dt,Ris the survival function.
+% Failure rate,h(t)=f(t)1F(t),t0
+% R(t)=eRt0h(u)du
+% function: (↵)=R10u↵1eudu, ↵>0, (↵+1) =↵(↵),a2R+,(n)=(n1)!,n=1,2,....(1/2) =p⇡
+% Jacobian: Letx=(x1,...,xn) andg(x)=(g1(x),...,gn(x)). The matrix of Jacobi has entries (@gi/@xj).The corresponding determinant is called the Jacobian.
+% Correlation coecient,⇢(X, Y)=\text{Cov}(X,Y)p\text{Var}(X)p\text{Var}(Y),1⇢(X, Y)122 
