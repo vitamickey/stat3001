@@ -147,11 +147,11 @@ We have an analogue definition for the multivariable case.
 \begin{definition}[Fisher's expected information - multivariable]\label{defn:expected information - multi}
     When \(\bm{\theta}\) is a vector,  
     \begin{equation}\label{eq:expected info multi E score}
-        \mathscr{I}(\bm{\theta}) = \mathbb{E}\left[\frac{\partial \log L(\theta)}{\partial \bm{\theta}} \cdot \frac{\partial \log L(\theta)}{\partial \bm{\theta}}^T\right],
+        \mathscr{I}(\bm{\theta}) = \mathbb{E}\left[\frac{\partial \log L(\bm{\theta})}{\partial \bm{\theta}} \cdot \left(\frac{\partial \log L(\bm{\theta})}{\partial \bm{\theta}}\right)^T\right],
     \end{equation}
     also given by 
     \begin{equation}\label{eq:expected info multi Cov score}
-        \mathscr{I}(\bm{\theta}) = \text{Cov}\left(\frac{\partial \log L(\theta)}{\partial \bm{\theta}}\right).
+        \mathscr{I}(\bm{\theta}) = \text{Cov}\left(\frac{\partial \log L(\bm{\theta})}{\partial \bm{\theta}}\right).
     \end{equation}
 \end{definition}
 
@@ -161,9 +161,17 @@ Here, we introduce \(I(\bm{\theta})\), which becomes useful later in the maximum
     I(\bm{\theta}) = -\frac{\partial^2 \log L(\bm{\theta})}{\partial \bm{\theta}^2}
 \end{equation}
 
-That definition feels a bit like abuse of notation... idk that should be single variable stuff. 
-For the multivariable case, this is also just the negative of the Hessian of the log likelihood function, which is what we are interested in for statistics. 
-Anyway, given this, we have the following result which is technically a theorem and holds for distributions belonging to the regular exponential family:
+The definition of \(I\) feels a bit like abuse of notation... 
+So, if it's too uncomfortable, think about it based on the Hessian definition. 
+It's worth noting that we don't care about the positive Hessian: the negative of the Hessian is what we are interested in for statistics. 
+Also, it's funny, because we don't have a name for this, but we do have a name for the mathematical object \(I(\hat{\bm{\theta}})\), where \(\hat{\bm{\theta}}\) is the ML estimate of \(\bm{\theta}\).
+
+\begin{definition}[Observed information matrix - multivariable]\label{defn:observed information matrix - multi}
+    When \(\bm{\theta}\) is a vector, I(\hat{\bm{\theta}}) is called the \textbf{observed information matrix}. 
+    More simply, it is the negative of the Hessian of the log likelihood function with the ML estimate substituted into it. 
+\end{definition}
+
+Anyway, given this and under regularity conditions (see section \ref{sec:reg conds I}), we have the following result which is technically a theorem and holds for distributions belonging to the regular exponential family (see section \ref{sec:reg exp fam}):
 
 \begin{equation}\label{eq:thm about expected info as the expectation of I}
     \mathscr{I}(\bm{\theta}) = \mathbb{E}[I(\bm{\theta})]
@@ -184,17 +192,26 @@ Anyway, given this, we have the following result which is technically a theorem 
 
 \bigskip
 
-Some of the results from the previous section only hold under the stuff Geoff lists in the notes, namely the following results:
+Here is a list of regularity conditions:
+
+(literally in the notes, will add when I can be bothered, otherwise there is a nice explanation for them \href{https://stats.stackexchange.com/questions/101520/what-are-the-regularity-conditions-for-likelihood-ratio-test}{here}).
+% % https://stats.stackexchange.com/questions/101520/what-are-the-regularity-conditions-for-likelihood-ratio-test
+
+% \begin{enumerate}
+%     \item The densities 
+% \end{enumerate}
+
+Some of the results from the previous section only hold under the regularity conditions Geoff lists in the notes, namely the following results:
 
 \begin{align*}
-    \mathbb{E}\left(\frac{\partial \log L(\theta)}{\partial \theta}\right) &= 0\\
+    \mathbb{E}\left[\frac{\partial \log L(\theta)}{\partial \theta}\right] &= 0\\
     \mathscr{I}(\theta) &= \mathbb{E}[I(\theta)]\\
     \text{Var}(T) &\geq \frac{(g'(\theta))^2}{\mathscr{I}(\theta)}
 \end{align*}
 
 for any unbiased estimator \(T\) of the function \(g(\theta)\). 
-I could add references for these but like just scroll up my dude. 
-I think these extend to multivariable cases too ? sort of... well at least the first one doesn't, the second one I'm pretty sure does and the third one would need covariance?
+I think these extend to multivariable cases too ? sort of... well at least the first one might, the second one I'm pretty sure does and the third one would need covariance?
+There is a proof of the multivariate case in Lecture Note 1 for STAT3001 Sem 1 2022, starting at the end of page 1.
 
 \subsection{Cram\'{e}r-Rao lower bound}\label{subsec:Cramer-Rao}
 
@@ -261,7 +278,7 @@ I.e. calculate the variance of \(T\), and the value of
 
 \textit{From page 15, with assistance from the folks at MIT, \autocite{MIT} in Lecture 7.}
 
-Consider the case where we have \(p\)-dimensional observations, \(\bm{x}_1,...,\bm{x}_n;\bm{\theta}\), 
+Consider the case where we have \(p\)-dimensional observations, \(\bm{x}_1,...,\bm{x}_n\), 
 a \(d\)-dimensional parametor vector \(\bm{\theta}\), 
 and a \(q\)-dimensional sufficient statistic \(\bm{T}(\bm{x}_1,...,\bm{x}_n;\bm{\theta})\) where \(q\geq d\). 
 The likelihood function \(L(\bm{\theta})\) or equivalently the joint 
@@ -269,11 +286,21 @@ pmf or pdf \(f(\bm{x}_1,...,\bm{x}_n;\bm{\theta})\) belongs to the
 \textbf{\(d\)-parameter exponential family} if it has the form
 
 \begin{equation}\label{eq:exp family}
-    f(\bm{x}_1,...,\bm{x}_n;\bm{\theta}) = L(\bm{\theta}) = b(\bm{x}_1,...,\bm{x}_n)\exp{\bm{c}(\bm{\theta})^T \bm{T}(\bm{x}_1,...,\bm{x}_n;\bm{\theta})/a(\bm{\theta})},
+    L(\bm{\theta}) = f(\bm{x}_1,...,\bm{x}_n;\bm{\theta}) = b(\bm{x}_1,...,\bm{x}_n)\exp{\bm{c}(\bm{\theta})^T \bm{T}(\bm{x}_1,...,\bm{x}_n;\bm{\theta})/a(\bm{\theta})},
 \end{equation}
 
 where \(\bm{c}(\bm{\theta})\) is a \(q\times 1\) vector function of \(\bm{\theta}\) and \(a(\bm{\theta})\) and \(b(\bm{x}_1,...,\bm{x}_n)\) 
 are non-negative scalar functions. 
+
+
+
+
+
+
+
+\subsection{Parameter space}\label{sec:parameter space}
+
+
 
 
 \subsection{Complete???}\label{sec:complete}
