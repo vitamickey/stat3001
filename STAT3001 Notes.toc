@@ -22,21 +22,23 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {1.4.2}The meat}{7}{subsection.1.4.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {1.5}Regularity conditions (I)}{8}{section.1.5}%
+\contentsline {section}{\numberline {1.5}Regularity conditions (I)}{9}{section.1.5}%
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {1.5.1}Cram\'{e}r-Rao lower bound}{9}{subsection.1.5.1}%
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {1.6}Regular exponential family}{10}{section.1.6}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.6.1}Complete???}{10}{subsection.1.6.1}%
+\contentsline {subsection}{\numberline {1.6.1}Parameter space}{11}{subsection.1.6.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.6.2}Complete???}{11}{subsection.1.6.2}%
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {1.7}UMVU estimators}{11}{section.1.7}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {1.8}Maximum Likelihood Method (ML)}{11}{section.1.8}%
+\contentsline {section}{\numberline {1.8}Maximum Likelihood Method (ML)}{12}{section.1.8}%
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {1.9}Sufficiency}{13}{section.1.9}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {1.10}I am not sure what to call this section}{13}{section.1.10}%
+\contentsline {section}{\numberline {1.10}I am not sure what to call this section}{14}{section.1.10}%
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {1.11}Jensen's Inequality}{14}{section.1.11}%
 \defcounter {refsection}{0}\relax 
