@@ -1,5 +1,5 @@
 \contentsline {chapter}{Preface}{3}{chapter*.1}%
-\contentsline {part}{I\hspace {1em}Geoff's half of the course}{5}{part.1}%
+\contentsline {part}{I\hspace {1em}Geoff's half of the course. Beans B)}{5}{part.1}%
 \contentsline {chapter}{\numberline {1}Background: Point estimation}{6}{chapter.1}%
 \contentsline {section}{\numberline {1.1}Introduction}{6}{section.1.1}%
 \contentsline {section}{\numberline {1.2}Estimate and estimator}{6}{section.1.2}%
