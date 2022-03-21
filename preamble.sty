@@ -1,0 +1,219 @@
+\ProvidesPackage{preamble}
+
+\usepackage[backend=biber]{biblatex-chicago}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amsfonts,amssymb,amsthm}
+\usepackage[dvipsnames]{xcolor}
+\usepackage[framemethod=TikZ]{mdframed}
+\usepackage{bm,enumitem,float,graphicx,hyperref,listings,mathrsfs,multirow,setspace,thmtools,tikz,titlesec,tocloft,url,cleveref}
+\usepackage[margin=1.2in]{geometry}
+\usepackage[final]{pdfpages}
+% \usepackage{unicode-math}
+% \setromanfont{TeX Gyre Bonum}
+% \setmathfont[math-style=ISO,bold-style=ISO]{TeX Gyre Bonum Math}
+
+\definecolor{codemagenta}{RGB}{211,054,130}
+\definecolor{codeyellow}{RGB}{181,137,0}
+\definecolor{codeblue}{RGB}{038,139,210}
+\definecolor{codeviolet}{RGB}{108,113,196}
+\definecolor{codebase1}{RGB}{007,054,066}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\definecolor{exampleyellow}{RGB}{223,165,058}
+\definecolor{gray75}{gray}{0.75}
+
+
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codemagenta},
+    keywordstyle=\color{codeyellow},
+    numberstyle=\tiny\color{codebase1},
+    stringstyle=\color{codeblue},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+
+\lstset{style=mystyle}
+
+\urlstyle{same}
+\bibliography{refs}
+
+\allowdisplaybreaks
+
+\DeclareUnicodeCharacter{2212}{-}
+
+
+% \begin{figure}[H]
+%     \centering
+%     \includegraphics[width=\textwidth]{Q15.png}
+%     \caption{Realisation of Markov Chain}
+% \end{figure}
+
+%%% TOC formatting
+
+\setlength{\cftaftertoctitleskip}{12pt}
+\setlength{\cftbeforesecskip}{0pt}
+% \renewcommand{\cftchapafterpnum}{\vspace{10pt}}
+
+%%% Title formatting
+
+\newcommand{\hsp}{\hspace{20pt}}
+\newcommand{\mybar}{\kern1pt\rule[-\dp\strutbox]{.8pt}{\baselineskip}\kern1pt}
+% \newcommand{\mybar}{\kern1pt\rule[-\dp\strutbox]{1pt}{\baselineskip}\kern1pt} % thicker
+\titleformat{\chapter}[hang]
+{\Huge\bfseries}
+{\thechapter\hsp\textcolor{gray75}{\mybar}\hsp}
+{0pt}
+{\Huge\bfseries}
+[]
+
+\titleformat{\section}[hang]
+{\Large\bfseries}
+{\thesection}
+{12pt}
+{}
+[]
+
+\titlespacing{\chapter}{0pt}{0pt}{24pt}
+
+
+%%% Other formatting
+
+\setlength{\parindent}{0pt}
+% \linespread{1.3} % gives 1.5 spacing (1.0 = single, 1.6 = double)
+
+%%% Theorem styles
+
+% \newtheoremstyle{theoremdd}% name of the style to be used
+% {}% measure of space to leave above the theorem. E.g.: 3pt
+% {}% measure of space to leave below the theorem. E.g.: 3pt
+% {}% name of font to use in the body of the theorem
+% {}% measure of space to indent
+% {}% name of head font
+% {}% punctuation between head and body
+% { }% space after theorem head; " " = normal interword space
+
+% thmtools
+
+\declaretheoremstyle[
+    headfont=\bfseries, 
+    notefont=\scshape, notebraces={(}{)},
+    bodyfont=\itshape,
+    postheadspace=1em,
+    % postheadhook={\textcolor{red}{\rule[.6ex]{\linewidth}{0.4pt}}\\},
+    spacebelow=\topsep,
+    % spaceabove=\topsep,
+    mdframed={
+            % linecolor=black!100, 
+            linewidth=2pt,
+            innerbottommargin=6pt, 
+            skipabove=\topskip, 
+            skipbelow=\topskip,
+            topline=false,
+            bottomline=false, 
+            rightline=false
+            }
+]{thm}
+
+\declaretheoremstyle[
+    spaceabove=\topsep, spacebelow=\topsep,
+    headfont=\itshape\bfseries,
+    notefont=\scshape, notebraces={(}{)},
+    bodyfont=\normalfont, 
+    postheadspace=1em,
+    qed=\qedsymbol
+]{proof}
+
+\declaretheoremstyle[
+    headfont=\bfseries\color{Periwinkle}, 
+    notefont=\scshape, notebraces={(}{)},
+    bodyfont=\normalfont,
+    postheadspace=1em,
+    % postheadhook={\textcolor{red}{\rule[.6ex]{\linewidth}{0.4pt}}\\},
+    spacebelow=\topsep,
+    % spaceabove=\topsep,
+    mdframed={
+            linecolor=Periwinkle!100, 
+            linewidth=2pt,
+            innerbottommargin=6pt, 
+            skipabove=\topskip, 
+            skipbelow=\topskip,
+            topline=false,
+            bottomline=false, 
+            rightline=false
+            }
+]{defn}
+
+\declaretheoremstyle[
+    headfont=\bfseries\color{exampleyellow}, 
+    notefont=\scshape, notebraces={(}{)},
+    bodyfont=\normalfont,
+    postheadspace=1em,
+    % postheadhook={\textcolor{red}{\rule[.6ex]{\linewidth}{0.4pt}}\\},
+    spacebelow=\topsep,
+    % spaceabove=\topsep,
+    mdframed={
+            linecolor=exampleyellow!100, 
+            linewidth=2pt,
+            innerbottommargin=6pt, 
+            skipabove=\topskip, 
+            skipbelow=\topskip,
+            topline=false,
+            bottomline=false, 
+            rightline=false
+            }
+]{eg}
+
+\declaretheoremstyle[
+    headfont=\bfseries\color{Plum}, 
+    notefont=\scshape, notebraces={(}{)},
+    bodyfont=\normalfont,
+    postheadspace=1em,
+    % postheadhook={\textcolor{red}{\rule[.6ex]{\linewidth}{0.4pt}}\\},
+    spacebelow=\topsep,
+    % spaceabove=\topsep,
+    mdframed={
+            linecolor=Plum!100, 
+            linewidth=2pt,
+            innerbottommargin=6pt, 
+            skipabove=\topskip, 
+            skipbelow=\topskip,
+            topline=false,
+            bottomline=false, 
+            rightline=false
+            }
+]{exer}
+
+\declaretheorem[
+    style=thm,
+    name=Theorem, 
+    within=chapter,
+]{theorem}
+
+\declaretheorem[
+    style=defn,
+    name=Definition, 
+    within=chapter,
+]{definition}
+
+\declaretheorem[
+    style=eg,
+    name=Example, 
+    within=chapter,
+]{example}
+
+\declaretheorem[
+    style=exer,
+    name=Exercise, 
+    within=chapter,
+]{exercise}

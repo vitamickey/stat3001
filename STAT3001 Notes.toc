@@ -1,0 +1,32 @@
+\contentsline {chapter}{Preface}{3}{chapter*.1}%
+\contentsline {part}{I\hspace {1em}Geoff's half of the course}{5}{part.1}%
+\contentsline {chapter}{\numberline {1}Background: Point estimation}{6}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Introduction}{6}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Estimate and estimator}{6}{section.1.2}%
+\contentsline {subsection}{\numberline {1.2.1}Error}{6}{subsection.1.2.1}%
+\contentsline {subsection}{\numberline {1.2.2}Unbiased estimators}{6}{subsection.1.2.2}%
+\contentsline {section}{\numberline {1.3}Method of Moments}{7}{section.1.3}%
+\contentsline {section}{\numberline {1.4}Likelihood function}{7}{section.1.4}%
+\contentsline {subsection}{\numberline {1.4.1}Motivation and intuition}{7}{subsection.1.4.1}%
+\contentsline {subsection}{\numberline {1.4.2}The meat}{8}{subsection.1.4.2}%
+\contentsline {section}{\numberline {1.5}Regularity conditions (I)}{10}{section.1.5}%
+\contentsline {subsection}{\numberline {1.5.1}Cram\'{e}r-Rao lower bound}{10}{subsection.1.5.1}%
+\contentsline {section}{\numberline {1.6}Regular exponential family}{11}{section.1.6}%
+\contentsline {subsection}{\numberline {1.6.1}Parameter space}{12}{subsection.1.6.1}%
+\contentsline {subsection}{\numberline {1.6.2}Complete???}{12}{subsection.1.6.2}%
+\contentsline {section}{\numberline {1.7}UMVU estimators}{12}{section.1.7}%
+\contentsline {section}{\numberline {1.8}Maximum Likelihood Method (ML)}{13}{section.1.8}%
+\contentsline {section}{\numberline {1.9}Sufficiency}{14}{section.1.9}%
+\contentsline {section}{\numberline {1.10}I am not sure what to call this section}{15}{section.1.10}%
+\contentsline {section}{\numberline {1.11}Jensen's Inequality}{15}{section.1.11}%
+\contentsline {section}{\numberline {1.12}Kullback-Leibler Distance}{15}{section.1.12}%
+\contentsline {section}{\numberline {1.13}Large Sample Theory}{15}{section.1.13}%
+\contentsline {section}{\numberline {1.14}Consistency}{15}{section.1.14}%
+\contentsline {section}{\numberline {1.15}Large-sample comparisons of estimators}{16}{section.1.15}%
+\contentsline {section}{\numberline {1.16}Asymptotic efficiency}{16}{section.1.16}%
+\contentsline {section}{\numberline {1.17}Maximum likelihood theorems}{16}{section.1.17}%
+\contentsline {section}{\numberline {1.18}Asymptotic distribution theorems}{16}{section.1.18}%
+\contentsline {chapter}{\numberline {2}Lec 1:}{17}{chapter.2}%
+\contentsline {part}{II\hspace {1em}Sharon's half of the course}{18}{part.2}%
+\contentsline {part}{III\hspace {1em}Stuff from STAT2003, STAT2004 and such}{19}{part.3}%
+\contentsline {chapter}{\numberline {3}Formulas}{20}{chapter.3}%

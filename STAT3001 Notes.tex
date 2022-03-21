@@ -1,0 +1,33 @@
+\documentclass[a4paper,12pt]{report}
+\usepackage{import}
+\usepackage{preamble}
+
+%%% Include settings
+
+% \includeonly{pt1lecnote6}
+
+\begin{document}
+
+\include{pre/titlepageandtoc}
+\include{pre/preface}
+
+\part{Geoff's half of the course}
+
+\include{pt1 geoff/bkgdpointestimation}
+\include{pt1 geoff/ln1}
+% \subincludefrom{pt1 geoff/}{ln2}
+% \subincludefrom{pt1 geoff/}{ln3}
+% \subincludefrom{pt1 geoff/}{ln4}
+% \subincludefrom{pt1 geoff/}{ln5}
+% \subincludefrom{pt1 geoff/}{ln6}
+% \subincludefrom{pt1 geoff/}{ln7}
+% \subincludefrom{pt1 geoff/}{ln8}
+% \subincludefrom{pt1 geoff/}{ln9}
+
+\part{Sharon's half of the course}
+
+\part{Stuff from STAT2003, STAT2004 and such}
+
+\subincludefrom{supp/}{suppformulas}
+
+\end{document}

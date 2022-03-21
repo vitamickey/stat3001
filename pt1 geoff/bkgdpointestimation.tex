@@ -1,0 +1,561 @@
+\chapter[Background: Point estimation]{Background: Point estimation}
+
+
+\section{Introduction}\label{sec:6intro}
+
+Suppose we have a set of random variables \(\bm{X}_1, ..., \bm{X}_n\) and 
+their observed values \(\bm{x}_1, ..., \bm{x}_n\). We say that these are 
+independently and identically distributed with a common pmf or pdf \(f(\bm{x};\bm{\theta})\), 
+i.e. 
+
+\[\bm{X}_1, ..., \bm{X}_n \overset{\text{i.i.d.}}{\sim} F_{\bm{\theta}}\]
+
+\section{Estimate and estimator}\label{sec:estimate and estimator}
+
+\textit{From Reference Notes}
+
+"We have a model of the data \(\bm{x}_1, ..., \bm{x}_n\) in terms of the random variables \(\bm{X}_1, ..., \bm{X}_n\) whose distribution is completely specified up to an unknown parameter vector \(\bm{\theta}\). 
+We wish to estimate \(\bm{\theta}\) on the basis of \(\bm{x}_1, ..., \bm{x}_n\) only. 
+Specifically, we wish to find a function \(\bm{T}\) of the data such that the vector \(\hat{\bm{\theta}} = \bm{T}(\bm{x}_1, ..., \bm{x}_n)\) is close to the unknown \(\bm{\theta}\). 
+\(\hat{\bm{\theta}}\) is called an \textbf{estimate} of \(\bm{\theta}\). 
+The corresponding \textit{random variable} \(\bm{T}(\bm{X}_1, ..., \bm{X}_n)\) is called an \textbf{estimator} of \(\bm{\theta}\). 
+A function such as \(\bm{T}\) above that only depends on the data but \textit{not on any unknown parameter} is called a \textbf{statistic}."\autocite{reference}
+
+\bigskip
+
+\subsection{Error}
+
+Given
+
+\begin{equation}\label{eq:error}
+    \mathbb{E}\left[\left|T(\bm{X}) − \theta \right|^a\right],
+\end{equation}
+
+we call equation \ref{eq:error} the \textbf{average mean absolute error} if \(a = 1\), or the \textbf{mean squared error} if \(a=2\).
+
+\subsection{Unbiased estimators}\label{sec:unbiased ests}
+
+\textit{From page 3 and PennState. \autocite{penn415}}
+
+An \textbf{unbiased estimator} satisfies 
+
+\begin{equation}\label{eq:unbiased cond}
+    \mathbb{E}[\bm{T}(\bm{X}_1, ..., \bm{X}_n)] = \bm{\theta}, \forall \bm{\theta}\in\bm{\Omega}
+\end{equation}
+
+That is, an unbiased estimator of \(\bm{\theta}\) has an expectation of \(\bm{\theta}\). 
+We are concerned with finding unbiased estimators since we don't really want our estimators to be biased, but also we
+need this condition to apply most of the theorems we encounter later in the course haha.
+
+\begin{definition}\label{defn:bias}
+    The \textbf{bias} of an estimator \(\bm{T}\) is defined as
+    \begin{equation}\label{eq:bias}
+        \text{bias}(\bm{T}) = \mathbb{E}[\bm{T}(\bm{X}_1, ..., \bm{X}_n) - \bm{\theta}]
+    \end{equation}
+    but since \(\theta\) functions as a constant, this can also be thought of as 
+    \[\text{bias}(\bm{T}) = \mathbb{E}[\bm{T}] - \bm{\theta}\]
+\end{definition}
+
+Using this definition, we can construct unbiased estimators for new functions of \(\theta\) using the following process. 
+Since \(\text{bias}(\bm{T}) = \mathbb{E}[\bm{T}] - \bm{\theta}\), we can rearrange this to \(\mathbb{E}[\bm{T}] = \text{bias}(\bm{T}) - \bm{\theta}\). 
+Defining \(g(\theta):= \text{bias}(\bm{T}) - \bm{\theta}\), we now have that \(T\) is an unbiased estimator of \(g(\theta)\). 
+hax. This is used in tutorial 2 question 3.
+
+\section{Method of Moments}\label{sec:method of moments}
+
+\textit{With assistance from the folks at PennState, chapter 1.4.\autocite{penn415}}
+
+In order to use the method of moments, we take \(k\) sample moments and equate these to \(k\) population moments, also referred to as theoretical moments. 
+We determine \(k\) by the number of unknown parameters we wish to estimate. 
+The \(k^{\text{th}}\) \textbf{sample moment} is defined as \(\frac{1}{n}\sum_{i}^{n}X_i^k\). 
+The \(k^{\text{th}}\) \textbf{theoretical moment} is defined as \(\mathbb{E}(X^k)\), and is a function of \(\bm{\theta}\).
+
+
+
+
+
+\section{Likelihood function}\label{sec:likelihood func}
+
+\textit{From page 8, with assistance from the folks at PennState.\autocite{penn415}}
+
+Note: The following is almost directly quoted from Pennstate, with only formatting changes to suit Geoff's teaching.
+
+\medskip
+
+\subsection{Motivation and intuition}
+Suppose we have a random sample \(\bm{X}_1,...,\bm{X}_n\) whose assumed probability distribution depends on some unknown parameter \(\bm{\theta}\). 
+Our primary goal here will be to find a point estimator \(U(\bm{X}_1,...,\bm{X}_n)\), such that \(U(\bm{x}_1,...,\bm{x}_n)\) is a "good" point estimate of \(\bm{\theta}\), where \(\bm{x}_1,...,\bm{x}_n\) are the observed values of the random sample. 
+For example, if we plan to take a random sample \(\bm{X}_1,...,\bm{X}_n\) for which the \(\bm{X}_i\) are assumed to be normally distributed with mean \(\mu\) and variance \(\sigma^2\), then our goal will be to find a good estimate of \(\mu\), say, using the data \(\bm{x}_1,...,\bm{x}_n\) that we obtained from our specific random sample \autocite{penn415}.
+
+\bigskip
+
+We could probably say that a good estimate of unknown parameter \(\bm{\theta}\) would be the value of \(\bm{\theta}\) that \textbf{maximises} the probability, i.e. the \textbf{likelihood}, of getting the data we observed. 
+This is where we get the idea of \textbf{"maximum likehood"} (see section \ref{sec:ML method}). 
+
+\subsection{The meat}
+How do we even start to think about implementing this practically?
+Going back to our motivation, suppose we have a random sample of i.i.d. \(\bm{X}_1,...,\bm{X}_n\) with the joint pmf or pdf \(f_{\bm{X}_1,...,\bm{X}_n}(\bm{x}_1,...,\bm{x}_n;\bm{\theta})\). 
+Our \textbf{likelihood function} is basically the joint pmf/pdf with a different name and notation, defined as follows:
+
+\begin{definition}[Likelihood function]\label{defn:likelihood func}
+    The \textbf{likelihood function} for a set of i.i.d. random variables is given by
+    \begin{equation}\label{eq:likelihood func}
+        L(\bm{\theta}) = \prod_{i=1}^n f(\bm{x}_i;\bm{\theta})
+    \end{equation}
+\end{definition}
+
+Notice that we don't tend to write that the function considers \(\bm{x}_1,...,\bm{x}_n\) as variables. 
+Whilst we consider the joint pmf or pdf as a function primarily of the observed values of our random sample, i.e. a function of \(\bm{x}_1,...,\bm{x}_n\), and also a function of \(\bm{\theta}\), we consider \(L(\bm{\theta})\) as a function of \(\bm{\theta}\) as the variable of interest, given that we already have \(\bm{x}_1,...,\bm{x}_n\), i.e. these values are not "varying".
+Alternatively, we consider \(L(\bm{\theta})\) as a realisation of the random variable \(L(\bm{\theta};\bm{X}_1,...,\bm{X}_n)\).
+We just consider the likelihood function as a function of \(\bm{\theta}\) since we are only interested in maximising \(L(\bm{\theta})\) by finding the best value of \(\bm{\theta}\) for the job. 
+
+\bigskip
+
+In the following definitions, we make use of the \textbf{log likelihood}, which is exactly what it sounds like: the log of the likelihood function, \(\log L(\bm{\theta})\). 
+
+\begin{definition}[Score statistic]\label{defn:score stat}
+    The \textbf{score statistic} is defined as 
+    \begin{equation}\label{eq:score stat}
+        S(\bm{x}_1,...,\bm{x}_n);\theta) = \frac{\partial \log L(\theta)}{\partial \theta},
+    \end{equation}
+    where \(\bm{\theta}\) is a scalar. 
+\end{definition}
+
+This is the derivative of the log likelihood. 
+The score statistic is used to find many other things in statistics. 
+We actually have a nice property of the single-variable score statistic: that the expectation is \(0\), i.e. \[\mathbb{E}\left(\frac{\partial \log L(\theta)}{\partial \theta}\right) = 0.\]
+
+\medskip 
+
+For the multivariable case, you can find the score statistic as a vector with each entry as the first partial derivative in terms of each entry of \(\bm{\theta}\). 
+
+\begin{definition}[Fisher's expected information - single variable]\label{defn:expected information - single}
+    When \(\bm{\theta}\) is a scalar, \textbf{Fisher's expected information}, often referred to as just the \textbf{expected information} is defined as 
+    \begin{equation}\label{eq:expected info sing E score}
+        \mathscr{I}(\bm{\theta}) = \mathbb{E}\left[\left(\frac{\partial \log L(\theta)}{\partial \theta}\right)^2\right],
+    \end{equation}
+    or, 
+    \begin{equation}\label{eq:expected info sing Var score}
+        \mathscr{I}(\bm{\theta}) = \text{Var}\left(\frac{\partial \log L(\theta)}{\partial \theta}\right).
+    \end{equation}
+\end{definition}
+
+I.e. for a single variable parameter, we have that the expected information is the expectation of the square of the score statistic. 
+We obtain the second definition of the expected information from the fact that the expectation of the score is \(0\) (see above). 
+We have an analogue definition for the multivariable case. 
+
+\begin{definition}[Fisher's expected information - multivariable]\label{defn:expected information - multi}
+    When \(\bm{\theta}\) is a vector,  
+    \begin{equation}\label{eq:expected info multi E score}
+        \mathscr{I}(\bm{\theta}) = \mathbb{E}\left[\frac{\partial \log L(\bm{\theta})}{\partial \bm{\theta}} \cdot \left(\frac{\partial \log L(\bm{\theta})}{\partial \bm{\theta}}\right)^T\right],
+    \end{equation}
+    also given by 
+    \begin{equation}\label{eq:expected info multi Cov score}
+        \mathscr{I}(\bm{\theta}) = \text{Cov}\left(\frac{\partial \log L(\bm{\theta})}{\partial \bm{\theta}}\right).
+    \end{equation}
+\end{definition}
+
+Here, we introduce \(I(\bm{\theta})\), which becomes useful later in the maximum likelihood section.
+
+\begin{equation}\label{eq:I}
+    I(\bm{\theta}) = -\frac{\partial^2 \log L(\bm{\theta})}{\partial \bm{\theta}^2}
+\end{equation}
+
+The definition of \(I\) feels a bit like abuse of notation... 
+So, if it's too uncomfortable, think about it based on the Hessian definition. 
+It's worth noting that we don't care about the positive Hessian: the negative of the Hessian is what we are interested in for statistics. 
+Also, it's funny, because we don't have a name for this, but we do have a name for the mathematical object \(I(\hat{\bm{\theta}})\), where \(\hat{\bm{\theta}}\) is the ML estimate of \(\bm{\theta}\).
+
+\begin{definition}[Observed information matrix - multivariable]\label{defn:observed information matrix - multi}
+    When \(\bm{\theta}\) is a vector, \(I(\hat{\bm{\theta}})\) is called the \textbf{observed information matrix}. 
+    More simply, it is the negative of the Hessian of the log likelihood function with the ML estimate substituted into it. 
+\end{definition}
+
+Anyway, given this and under regularity conditions (see section section below), we have the following result which is technically a theorem and holds for distributions belonging to the regular exponential family (see section on regular exponential family):
+
+\begin{equation}\label{eq:thm about expected info as the expectation of I}
+    \mathscr{I}(\bm{\theta}) = \mathbb{E}[I(\bm{\theta})]
+\end{equation}
+
+% We consider the likelihood function 
+% as a a realisation of the random variable \(L(\bm{\theta};\bm{X}_1, ..., \bm{X}_n)\). 
+% I gather that the likelihood function can be thought about as one 
+% where the parameters are more of interest than 
+% in the joint pmf or pdf where the observations are of interest and the 
+% parameters are set. 
+
+
+\section{Regularity conditions (I)}\label{sec:reg conds I}
+
+\textit{Page 9/10.}
+
+\bigskip
+
+Here is a list of regularity conditions:
+
+(literally in the notes, will add when I can be bothered, otherwise there is a nice explanation for them \href{https://stats.stackexchange.com/questions/101520/what-are-the-regularity-conditions-for-likelihood-ratio-test}{here}).
+% % https://stats.stackexchange.com/questions/101520/what-are-the-regularity-conditions-for-likelihood-ratio-test
+
+% \begin{enumerate}
+%     \item The densities 
+% \end{enumerate}
+
+Some of the results from the previous section only hold under the regularity conditions Geoff lists in the notes, namely the following results:
+
+\begin{align*}\label{not thm:reg conds I}
+    \mathbb{E}\left[\frac{\partial \log L(\theta)}{\partial \theta}\right] &= 0\\
+    \mathscr{I}(\theta) &= \mathbb{E}[I(\theta)]\\
+    \text{Var}(T) &\geq \frac{(g'(\theta))^2}{\mathscr{I}(\theta)}
+\end{align*}
+
+for any unbiased estimator \(T\) of the function \(g(\theta)\). 
+I think these extend to multivariable cases too ? sort of... well at least the first one might, the second one I'm pretty sure does and the third one would need covariance?
+There is a proof of the multivariate case in Lecture Note 1 for STAT3001 Sem 1 2022, starting at the end of page 1.
+
+\subsection{Cram\'{e}r-Rao lower bound}\label{subsec:Cramer-Rao}
+
+Consider the unbiased estimator \(T\) of \(g(\theta)\). 
+We have that this estimator is unbiased, but wouldn't it be nice if it also had as little variance as possible?
+Luckily we have a handy dandy formula for the smallest possible value of the variance of any unbiased estimator.
+
+\begin{definition}[\textbf{Cram\'{e}r-Rao lower bound}]\label{defn:cramer}
+    The \textbf{Cram\'{e}r-Rao} \textbf{lower bound}, or the \textbf{minimum variance bound (MVB)}, is the lower bound of the variance of some unbiased estimator \(T\) of \(g(\theta)\), 
+    \begin{equation}\label{eq:MVB}
+        \frac{\left(g'(\theta)\right)^2}{\mathscr{I}(\theta)},
+    \end{equation}
+    satisfying the inequality 
+    \begin{equation}\label{eq:MVB inequality}
+        \text{Var}(T) \geq \frac{\left(g'(\theta)\right)^2}{\mathscr{I}}.,
+    \end{equation}
+\end{definition}
+
+So, if the variance of \(T\) attains this value, we know that it has the smallest variance possible. 
+There are two ways we can determine whether \(T\) attains this lower bound:
+
+\bigskip
+
+The first method is introduced in a way that I don't really understand in the notes:
+"The unbiased estimator \(T\) of \(g(\theta)\) \textbf{attains the MVB}, if and only if there is equality in the 
+Cauchy-Schwarz inequality applied to the score statistic and T."
+What does this mean? Idk, but here is the conclusion we get from it
+
+\begin{theorem}[Factoring the score statistic]\label{thm:factoring score stat}
+    If we can factor the score statistic as 
+    \begin{equation}\label{eq:factoring score statistic}
+        \frac{\partial \log L(\theta)}{\partial \theta} = k(\theta)(T-g(\theta)),
+    \end{equation}
+    where \(k(\theta)\) is some function of only \(\theta\), i.e. it is not dependent on \(T\), then we know that the variance of \(T\) \textbf{attains the MVB}.
+    This is a necessary and sufficient condition for an estimator to attain the MVB. 
+\end{theorem}
+
+A fun thing from this is that we can find the expected information from this factored form, where 
+\begin{equation}\label{eq:expected info from factored score stat function theta}
+    \mathscr{I}(\theta) = |k(\theta)g'(\theta)|,
+\end{equation}
+
+or in the case where \(g(\theta)=\theta\), 
+\begin{equation}\label{eq:expected info from factored score stat scalar theta}
+    \mathscr{I}(\theta) = |k(\theta)|.
+\end{equation}
+
+
+\bigskip
+
+Another method we can use to determine whether an unbiased estimator \(T\) for \(g(\theta)\) attains the MVB is to calculate its variance and see if it is equal to the expected information \(\mathscr{I}(\theta)\) (see \hyperref[defn:expected information - single]{expected information section}). 
+I.e. calculate the variance of \(T\), and the value of 
+
+\begin{exercise}
+    See tutorial 2 for useful exercises in this. Questions 1 (i) and (ii) cover factoring the score statistic. 
+    Question 5 is an exercise in determining whether an unbiased estimator attains the MVB using both of the above methods.  
+\end{exercise}
+
+
+
+
+
+\section{Regular exponential family}\label{sec:reg exp fam}
+
+\textit{From page 15, with assistance from the folks at MIT, \autocite{MIT} in Lecture 7.}
+
+Consider the case where we have \(p\)-dimensional observations, \(\bm{x}_1,...,\bm{x}_n\), 
+a \(d\)-dimensional parametor vector \(\bm{\theta}\), 
+and a \(q\)-dimensional sufficient statistic \(\bm{T}(\bm{x}_1,...,\bm{x}_n;\bm{\theta})\) where \(q\geq d\). 
+The likelihood function \(L(\bm{\theta})\) or equivalently the joint 
+pmf or pdf \(f(\bm{x}_1,...,\bm{x}_n;\bm{\theta})\) belongs to the 
+\textbf{\(d\)-parameter exponential family} if it has the form
+
+\begin{equation}\label{eq:exp family}
+    L(\bm{\theta}) = f(\bm{x}_1,...,\bm{x}_n;\bm{\theta}) = b(\bm{x}_1,...,\bm{x}_n)\exp{\bm{c}(\bm{\theta})^T \bm{T}(\bm{x}_1,...,\bm{x}_n;\bm{\theta})/a(\bm{\theta})},
+\end{equation}
+
+where \(\bm{c}(\bm{\theta})\) is a \(q\times 1\) vector function of \(\bm{\theta}\) and \(a(\bm{\theta})\) and \(b(\bm{x}_1,...,\bm{x}_n)\) 
+are non-negative scalar functions. 
+
+
+
+
+
+
+
+\subsection{Parameter space}\label{sec:parameter space}
+
+
+
+
+\subsection{Complete???}\label{sec:complete}
+
+I am not sure why it never says this anywhere in the notes explicitly, but being able to find that a likelihood function belongs to the regular exponential family shows that the corresponding \(\bm{T}\) is a complete and sufficient statistic for \(\bm{\theta}\) (see section \ref{sec:sufficiency} for more on sufficiency). 
+I don't even understand what it means to be complete ngl (though there is a definition in the notes on p. 24), but we need for our statistics to be complete in order to apply different theorems, such as Rao-Blackwell theorem \ref{thm:Rao-Blackwell}, since completeness guarantees uniqueness in certain statistical procedures based on \(\bm{T}\).
+I won't write a definition here because it's not even all that practical. Actually, just kidding, I will.
+
+\begin{definition}[\textbf{Complete}]\label{defn:complete}
+    A sufficient statistic \(\bm{T}\) is said to be \textbf{complete} if 
+    \begin{equation}\label{eq:complete premise}
+        \mathbb{E}_{\bm{\theta}}[w(\bm{T})] = \bm{0}, \forall \bm{\theta} \in \bm{\Omega} \Rightarrow w{\bm{T}} \equiv \bm{0}
+    \end{equation}
+    except perhaps on a set of probability zero. 
+\end{definition}
+
+
+
+\section{UMVU estimators}\label{sec:UMVU ests}
+
+\textit{From page 17, with assistance from the folks at Stanford, \autocite{stanford} in Lecture 4 2016.}
+
+An estimator is said to be \textbf{UMVU (uniform minimum variance unbiased)} estimator of \(g(\theta)\) if its variance is a minimum for all values of \(\theta\) in the class of all unbiased estimators of \(g(\theta)\). 
+The variance of a UMVU estimator does not necessarily have to attain the MVB, but it certainly can.
+If an unbiased estimator \(T\) attains the MVB, then it is a \textbf{MVB estimator} (it must attain the MVB for all values of \(\theta\)). 
+
+\begin{example}
+    The example here is basically question 1 of assignment 2.
+\end{example}
+
+Note that if a function \(g(\theta)\) of \(\theta\) has an unbiased estimator that attains the MVB, then any other function of \(\theta\) with an unbiased estimator that attains the MVB must be a linear function of \(g(\theta)\). 
+
+\bigskip
+
+To find a UMVU estimator or determine whether an estimator is UMVU, we have a couple of methods. 
+A UMVU estimator can be found by implementing \hyperref[thm:thm 2 UMVU]{Theorem 2} from section \ref{sec:Rao-Blackwell??}. 
+Also, I think that if an estimator hits the  \hyperref[defn:cramer]{Cram\'{e}r-Rao lower bound} for all values of \(\theta\), then it is also UMVU, but UMVU estimators don't necessarily need to have this as a property. 
+So, you can factor the score statistic and then be like "the estimator must be UMVU". 
+
+\begin{exercise}
+    Assignment 1 question (iv), tutorial 2 question 1 (ii) and 5, assignment 2 question (a) (i), (c) (iii) (iv) and (d) (ii). 
+    The example given on page 18 is literally assignment 2 question (a) (i). 
+\end{exercise}
+
+\section{Maximum Likelihood Method (ML)}\label{sec:ML method}
+
+\textit{Page 20, with help from PennState and that chonky textbook that costs \$200 at the school locker (yikes). \autocite{penn415} \autocite{rice}}
+
+Let us think back to section \ref{sec:likelihood func} where we discussed the likelihood function. 
+Why introduce the likelihood function separately to maximum likelihood estimation? 
+I don't know. But, to reintroduce the idea of maximum likelihood estimation, I will quote myself:
+
+\bigskip
+
+"We could probably say that a good estimate of unknown parameter \(\bm{\theta}\) would be the value of \(\bm{\theta}\) that \textbf{maximises} the probability, i.e. the \textbf{likelihood}, of getting the data we observed. 
+This is where we get the idea of \textbf{"maximum likehood"}." 
+
+\bigskip
+
+So, recalling the definition of the likelihood function from equation \ref{eq:likelihood func}, 
+
+\begin{equation*}
+    L(\bm{\theta}) = \prod_{i=1}^n f(\bm{x}_i;\bm{\theta}),
+\end{equation*}
+
+let's suppose we have some likelihood function \(L(\bm{\theta})\) and proceed to define \textbf{maximum likelhood estimates and estimators}. 
+
+\begin{definition}[Maximum likelihood estimate]\label{defn:ml estimate}
+    If 
+    \begin{equation}\label{eq:ml estimate}
+        \hat{\bm{\theta}} = U(\bm{x}_1,...,\bm{x}_n)
+    \end{equation}
+    maximises the corresponding likelihood \(L(\bm{\theta})\), then \(\hat{\bm{\theta}}\) is called the \textbf{maximum likelihood estimate}.
+    This is also referred to as the \textbf{ML estimate} or simply the \textbf{MLE}.
+\end{definition}
+
+In plainer terms, the maximum likelihood estimate is the value of \(\bm{\theta}\) which makes the observed data most probable or "most likely" to occur. \autocite{rice}
+From this, the definition of the \textbf{maximum likelihood estimator} follows.
+
+\begin{definition}[Maximum likelihood estimator]\label{defn:ml estimator}
+    Given an MLE such as above (eq. \ref{eq:ml estimate}), the corresponding random variable
+    \begin{equation}\label{eq:ml estimator}
+        U(\bm{X}_1,...,\bm{X}_n)
+    \end{equation}
+    is called the \textbf{maximum likelihood estimator}, also referred to as the \textbf{ML estimator}.
+\end{definition}
+
+How do we find these maximum likelihood things? 
+Well, we can equate the score statistic to \(0\) and substitute \(\bm{\theta}\) for \(\hat{\bm{\theta}}\) to find the MLE. 
+This actually makes a lot of sense since the score statistic is a derivative of the likelihood, so we are literally just using classic optimisation/maximisation techniques when using the ML method. 
+When asked to find the estimator as opposed to the estimate, simply replace any observed values \(x_i\) with their corresponding random variables \(X_i\).
+
+\begin{exercise}
+    Here are a bunch of places we do this: Tutorial 2 question 1 part (i) and (ii), tutorial 2 question 5, assignment 1 question (iii) and (v), assignment 2 question (b) part (ii).
+\end{exercise}
+
+\section{Sufficiency}\label{sec:sufficiency}
+
+\textit{From page 24, with assistance from the folks at PennState\autocite{penn415}.}
+
+
+
+A \textbf{statistic} is a function of the data alone which does not rely on any other parameter. 
+
+% \statedefsolid{
+%     \begin{definition}[Sufficient]\label{defn: sufficienttest}
+%         Let \(\bm{X}_1,...,\bm{X}_n\) be a random sample from a probability distribution with unknown parameter \(\bm{\theta}\). 
+%         Then, the statistic:
+%         \[\bm{T} = u(\bm{X}_1,...,\bm{X}_n)\]
+%         is said to be \textbf{sufficient} for \(\theta\) if the conditional distribution of \(X_1,...,X_n\), 
+%         given the statistic \(Y\), does not depend on the parameter \(\theta\). 
+%     \end{definition}    
+% }
+
+\begin{definition}[Sufficient]\label{defn:sufficient}
+    Let \(\bm{X}_1,...,\bm{X}_n\) be a random sample from a probability distribution with unknown parameter \(\bm{\theta}\). 
+    Then, the statistic
+    \[\bm{T} = U(\bm{X}_1,...,\bm{X}_n)\]
+    is said to be \textbf{sufficient} for \(\bm{\theta}\) if the conditional distribution of \(X_1,...,X_n\), 
+    given the statistic \(\bm{T}\), does not depend on the parameter \(\bm{\theta}\). 
+\end{definition}
+
+This is kinda weird, yeah. In a sense, this means that \(\bm{T}\) contains 
+all the information about \(\bm{\theta}\) contained in the observed sample 
+\(\bm{x}_1,...,\bm{x}_n\). 
+
+% Let's look at an example. 
+
+% \begin{example}[]
+    
+% \end{example}
+
+\bigskip
+
+The definition hopefully makes more sense after the previous example. 
+Though, in practice, finding the conditional distribution 
+of \(X_1,...,X_n\) given \(\bm{T}\) is neither convenient nor practical. 
+As such, we do not often use the formal definition of sufficiency 
+to identify or verify sufficient statistics. Instead, we employ 
+the following theorem.
+
+% \begin{theorem}[Here is an example of a theorem boi]
+%     Blah blah squeeze theorem idk. \[b_n \leq a_n \leq c_n\] must mean that the limit of \(a_n\) is between the limits of \(b_n\) and \(c_n\). 
+% \end{theorem}
+
+\begin{theorem}[Fisher-Neyman factorisation theorem]\label{thm: Factorisation Theorem}
+    Given the random variables \(\bm{X}_1,...,\bm{X}_n\) with joint pmf or pdf \(f(\bm{x}_1,...,\bm{x}_n;\bm{\theta})\). 
+    A statistic \(\bm{T}\) is \textbf{sufficient} for \(\bm{\theta}\) if and only if the joint pmf or pdf can be written as 
+    \[f(\bm{x}_1,...,\bm{x}_n;\bm{\theta}) = h_1(\bm{T}(\bm{x}_1,...,\bm{x}_n;\bm{\theta});\bm{\theta})
+    h_2(\bm{x}_1,...,\bm{x}_n;\bm{\theta}), \forall\bm{\theta}\in\Omega\]
+\end{theorem}
+
+
+
+So, if we are able to find such a factorisation for a joint pmf or pdf, 
+the \(\bm{T}\) we have found is a sufficient statistic. 
+
+
+\section{I am not sure what to call this section}\label{sec:Rao-Blackwell??}
+
+\textit{From page 30.}
+
+\begin{theorem}[Theorem 1 (Rao-Blackwell)]\label{thm:Rao-Blackwell}
+    Let \(\bm{X}\) be a random variable with a pmf or pdf \(f(x;\bm{\theta})\) and suppose that \(\bm{T}\) is a complete, sufficient statistic for \(\theta\). 
+    If \(U(\bm{T})\) is an unbiased estimator of \(\theta\) with finite variance, 
+    then, \(U(\bm{T})\) is a UMVU estimator of \(\theta\) and it is unique (see Geoff's notes for particularities).
+\end{theorem}
+
+The following theorem is referred to as the \textbf{Lehmann-Scheff\'{e} Theorem}.
+
+\begin{theorem}[Theorem 2]\label{thm:thm 2 UMVU}
+    Let \(\bm{X}\) be a random variable with a pmf or pdf \(f(x;\bm{\theta})\) and suppose that \(\bm{T}\) is a complete, sufficient statistic for \(\theta\). 
+    If \(U(\bm{T})\) is an unbiased estimator of \(\theta\) with finite variance, 
+    then, \(U(\bm{T})\) is a UMVU estimator of \(\theta\) and it is unique (see Geoff's notes for particularities).
+\end{theorem}
+
+\begin{theorem}[Basu's Theorem]\label{thm:Basu's}
+    Let \(\bm{T}\) be a complete, sufficient statistic for \(\bm{\theta}\). 
+    If the distribution of some statistic \(V(\bm{X}_1,...,\bm{X}_n)\) does not depend on \(\bm{\theta}\), 
+    then \(\bm{V}\) is said to be an \textbf{ancillary} statistic, i.e. a statistic that is distributed independently of \(\bm{T}\).
+\end{theorem}
+
+
+\section{Jensen's Inequality}\label{sec:Jensen's ineq}
+
+
+
+\section{Kullback-Leibler Distance}\label{sec:Kullback-Leibler}
+
+
+
+\section{Large Sample Theory}\label{sec:large sample theory}
+
+
+\section{Consistency}\label{sec:consistency}
+
+\begin{definition}[Consistent]\label{defn:consistent}
+    A sequence of estimators \(T_n\) of \(g(\bm{\theta})\) is said to be \textbf{consistent} if for every \(\bm{\theta}\in\Omega\), 
+    \begin{equation*}
+        T_n \overset{P_\theta}{\to} g(\bm{\theta})\text{ as } n\to\infty;
+    \end{equation*}
+    that is, given any \(\varepsilon>0\), then 
+    \begin{equation*}
+        \mathbb{P}\left(|T_n(\bm{X}_1,...,\bm{X}_n) - g(\bm{\theta})| \geq \varepsilon \right) \to 0\text{ as } n\to\infty.
+    \end{equation*}
+\end{definition}
+
+\begin{theorem}[Consistent]\label{thm:consistent}
+    If \(\text{Var}(T_n)\to 0\) and \(\text{bias}(T_n)\to 0\) as \(n\to\infty\), then the sequence of estimates \(T_n\) is consistent for estimating \(g(\bm{\theta})\). 
+\end{theorem}
+
+\begin{proof}
+    Given in the notes.
+\end{proof}
+
+\begin{exercise}
+    Tutorial 2 question 4 asks you to present this proof, essentially. 
+\end{exercise}
+
+
+\section{Large-sample comparisons of estimators}\label{sec:large-sample comps}
+
+
+\section{Asymptotic efficiency}\label{sec:asymptotic efficiency}
+
+
+
+\section{Maximum likelihood theorems}\label{sec:ML thms}
+
+\textit{Page 48, a.k.a. "SOME THEOREMS THAT PROVIDE A BASIS FOR MAXIMUM LIKELIHOOD".}
+
+% \begin{theorem}[Theorem 3]\label{thm:thm 3 MLE}
+%     .
+% \end{theorem}
+
+% \begin{theorem}[Theorem 4]\label{thm:thm 4 MLE}
+%     .
+% \end{theorem}
+
+% \begin{theorem}[Theorem 5]\label{thm:thm 5 MLE}
+%     .
+% \end{theorem}
+
+\section{Asymptotic distribution theorems}\label{sec:asymptotic thms}
+
+\textit{Page 53, a.k.a. "Some further theorems concerning asymptotic distributions".}
+
+
+
+% \section{Maximum likelihood estimation under incorrect model}\label{sec:ML est incorrect}
+
+% \textit{Page 55. Section is capitalised in the notes.}
+
+
+% \section{Maximum likelihood estimation under incorrect model}\label{sec:ML est incorrect}
+
+% \textit{Page 55. Section is capitalised in the notes.}
+
+
