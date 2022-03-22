@@ -1,6 +1,6 @@
-PWD c:\Users\micha\Dropbox (c'est pour l'école)\HOME\2022 S1\STAT3001 uni work\stat3001
+PWD c:\Users\micha\Dropbox (c'est pour l'école)\HOME\2022 S1\STAT3001 uni work\Notes\stat3001
 INPUT C:\Users\micha\AppData\Local\MiKTeX\miktex\data\le\pdftex\pdflatex.fmt
-INPUT c:\Users\micha\Dropbox (c'est pour l'école)\HOME\2022 S1\STAT3001 uni work\stat3001\STAT3001 Notes.tex
+INPUT c:\Users\micha\Dropbox (c'est pour l'école)\HOME\2022 S1\STAT3001 uni work\Notes\stat3001\STAT3001 Notes.tex
 OUTPUT STAT3001 Notes.log
 INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\tex\latex\base\report.cls
 INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\tex\latex\base\report.cls
@@ -265,6 +265,52 @@ INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\tex\latex\biblatex\lbx\englis
 INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\tex\latex\biblatex\biblatex.cfg
 INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\tex\latex\biblatex\biblatex.cfg
 INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\tex\latex\biblatex\biblatex.cfg
+INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\tex\latex\l3kernel\expl3.sty
+INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\tex\latex\l3kernel\expl3.sty
+INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\tex\latex\l3kernel\expl3.sty
+INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\tex\latex\l3kernel\expl3.sty
+INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\tex\latex\l3kernel\expl3.sty
+INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\tex\latex\l3kernel\expl3.sty
+INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\tex\latex\l3kernel\expl3.sty
+INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\tex\latex\l3kernel\expl3.sty
+INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\tex\latex\l3kernel\expl3.sty
+INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\tex\latex\l3kernel\expl3.sty
+INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\tex\latex\l3kernel\expl3.sty
+INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\tex\latex\l3backend\l3backend-pdftex.def
+INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\tex\latex\l3backend\l3backend-pdftex.def
+INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\tex\latex\l3backend\l3backend-pdftex.def
+INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\tex\latex\l3backend\l3backend-pdftex.def
+INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\tex\latex\l3backend\l3backend-pdftex.def
+INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\tex\latex\l3backend\l3backend-pdftex.def
+INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\tex\latex\l3backend\l3backend-pdftex.def
+INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\tex\latex\l3backend\l3backend-pdftex.def
+INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\tex\latex\l3backend\l3backend-pdftex.def
+INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\tex\latex\l3backend\l3backend-pdftex.def
+INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\tex\latex\l3backend\l3backend-pdftex.def
+INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\tex\latex\biblatex\blx-case-expl3.sty
+INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\tex\latex\biblatex\blx-case-expl3.sty
+INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\tex\latex\biblatex\blx-case-expl3.sty
+INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\tex\latex\biblatex\blx-case-expl3.sty
+INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\tex\latex\biblatex\blx-case-expl3.sty
+INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\tex\latex\biblatex\blx-case-expl3.sty
+INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\tex\latex\biblatex\blx-case-expl3.sty
+INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\tex\latex\biblatex\blx-case-expl3.sty
+INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\tex\latex\biblatex\blx-case-expl3.sty
+INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\tex\latex\biblatex\blx-case-expl3.sty
+INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\tex\latex\biblatex\blx-case-expl3.sty
+INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\tex\latex\l3kernel\expl3.sty
+INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\tex\latex\l3packages\xparse\xparse.sty
+INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\tex\latex\l3packages\xparse\xparse.sty
+INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\tex\latex\l3packages\xparse\xparse.sty
+INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\tex\latex\l3packages\xparse\xparse.sty
+INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\tex\latex\l3packages\xparse\xparse.sty
+INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\tex\latex\l3packages\xparse\xparse.sty
+INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\tex\latex\l3packages\xparse\xparse.sty
+INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\tex\latex\l3packages\xparse\xparse.sty
+INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\tex\latex\l3packages\xparse\xparse.sty
+INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\tex\latex\l3packages\xparse\xparse.sty
+INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\tex\latex\l3packages\xparse\xparse.sty
+INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\tex\latex\l3kernel\expl3.sty
 INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\tex\latex\base\fontenc.sty
 INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\tex\latex\base\fontenc.sty
 INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\tex\latex\base\fontenc.sty
@@ -417,38 +463,6 @@ INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\tex\latex\mdframed\mdframed.s
 INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\tex\latex\mdframed\mdframed.sty
 INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\tex\latex\kvoptions\kvoptions.sty
 INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\tex\latex\l3packages\xparse\xparse.sty
-INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\tex\latex\l3packages\xparse\xparse.sty
-INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\tex\latex\l3packages\xparse\xparse.sty
-INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\tex\latex\l3packages\xparse\xparse.sty
-INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\tex\latex\l3packages\xparse\xparse.sty
-INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\tex\latex\l3packages\xparse\xparse.sty
-INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\tex\latex\l3packages\xparse\xparse.sty
-INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\tex\latex\l3packages\xparse\xparse.sty
-INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\tex\latex\l3packages\xparse\xparse.sty
-INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\tex\latex\l3packages\xparse\xparse.sty
-INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\tex\latex\l3packages\xparse\xparse.sty
-INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\tex\latex\l3kernel\expl3.sty
-INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\tex\latex\l3kernel\expl3.sty
-INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\tex\latex\l3kernel\expl3.sty
-INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\tex\latex\l3kernel\expl3.sty
-INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\tex\latex\l3kernel\expl3.sty
-INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\tex\latex\l3kernel\expl3.sty
-INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\tex\latex\l3kernel\expl3.sty
-INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\tex\latex\l3kernel\expl3.sty
-INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\tex\latex\l3kernel\expl3.sty
-INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\tex\latex\l3kernel\expl3.sty
-INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\tex\latex\l3kernel\expl3.sty
-INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\tex\latex\l3backend\l3backend-pdftex.def
-INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\tex\latex\l3backend\l3backend-pdftex.def
-INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\tex\latex\l3backend\l3backend-pdftex.def
-INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\tex\latex\l3backend\l3backend-pdftex.def
-INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\tex\latex\l3backend\l3backend-pdftex.def
-INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\tex\latex\l3backend\l3backend-pdftex.def
-INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\tex\latex\l3backend\l3backend-pdftex.def
-INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\tex\latex\l3backend\l3backend-pdftex.def
-INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\tex\latex\l3backend\l3backend-pdftex.def
-INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\tex\latex\l3backend\l3backend-pdftex.def
-INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\tex\latex\l3backend\l3backend-pdftex.def
 INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\tex\latex\etoolbox\etoolbox.sty
 INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\tex\latex\zref\zref-abspage.sty
 INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\tex\latex\zref\zref-abspage.sty
@@ -1067,10 +1081,6 @@ INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\tex\latex\hyperref\pd1enc.def
 INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\tex\latex\hyperref\pd1enc.def
 INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\tex\latex\hyperref\pd1enc.def
 INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\tex\latex\hyperref\pd1enc.def
-INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\tex\latex\hyperref\hyperref-langpatches.def
-INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\tex\latex\hyperref\hyperref-langpatches.def
-INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\tex\latex\hyperref\hyperref-langpatches.def
-INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\tex\latex\hyperref\hyperref-langpatches.def
 INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\tex\generic\intcalc\intcalc.sty
 INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\tex\generic\intcalc\intcalc.sty
 INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\tex\generic\intcalc\intcalc.sty
@@ -1254,6 +1264,21 @@ INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\tex\latex\thmtools\thm-patch.
 INPUT .\STAT3001 Notes.aux
 INPUT STAT3001 Notes.aux
 INPUT STAT3001 Notes.aux
+INPUT .\pre\titlepageandtoc.aux
+INPUT pre\titlepageandtoc.aux
+INPUT pre\titlepageandtoc.aux
+INPUT .\pre\preface.aux
+INPUT pre\preface.aux
+INPUT pre\preface.aux
+INPUT .\pt1 geoff\bkgdpointestimation.aux
+INPUT pt1 geoff\bkgdpointestimation.aux
+INPUT pt1 geoff\bkgdpointestimation.aux
+INPUT .\pt1 geoff\ln1.aux
+INPUT pt1 geoff\ln1.aux
+INPUT pt1 geoff\ln1.aux
+INPUT .\supp\pt3formulas.aux
+INPUT supp\pt3formulas.aux
+INPUT supp\pt3formulas.aux
 OUTPUT STAT3001 Notes.aux
 INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\tex\latex\biblatex-chicago\cms-american.lbx
 INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\tex\latex\biblatex-chicago\cms-american.lbx
@@ -1269,21 +1294,13 @@ INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\tex\latex\biblatex\lbx\englis
 INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\tex\latex\biblatex\lbx\english.lbx
 INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\tex\latex\biblatex\lbx\english.lbx
 INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\tex\latex\biblatex\lbx\english.lbx
-INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\tex\latex\l3kernel\expl3.sty
-INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\tex\latex\biblatex\blx-case-expl3.sty
-INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\tex\latex\biblatex\blx-case-expl3.sty
-INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\tex\latex\biblatex\blx-case-expl3.sty
-INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\tex\latex\biblatex\blx-case-expl3.sty
-INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\tex\latex\biblatex\blx-case-expl3.sty
-INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\tex\latex\biblatex\blx-case-expl3.sty
-INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\tex\latex\biblatex\blx-case-expl3.sty
-INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\tex\latex\biblatex\blx-case-expl3.sty
-INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\tex\latex\biblatex\blx-case-expl3.sty
-INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\tex\latex\biblatex\blx-case-expl3.sty
-INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\tex\latex\biblatex\blx-case-expl3.sty
-INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\tex\latex\l3kernel\expl3.sty
-INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\tex\latex\l3packages\xparse\xparse.sty
 OUTPUT STAT3001 Notes.bcf
+INPUT STAT3001 Notes.bbl
+INPUT .\STAT3001 Notes.bbl
+INPUT STAT3001 Notes.bbl
+INPUT .\STAT3001 Notes.bbl
+INPUT .\STAT3001 Notes.bbl
+INPUT STAT3001 Notes.bbl
 INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\tex\context\base\mkii\supp-pdf.mkii
 INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\tex\context\base\mkii\supp-pdf.mkii
 INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\tex\context\base\mkii\supp-pdf.mkii
@@ -1304,8 +1321,18 @@ INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\tex\latex\00miktex\epstopdf-s
 INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\tex\latex\00miktex\epstopdf-sys.cfg
 INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\tex\latex\00miktex\epstopdf-sys.cfg
 INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\tex\latex\hyperref\nameref.sty
-OUTPUT STAT3001 Notes.out
+INPUT .\STAT3001 Notes.out
+INPUT STAT3001 Notes.out
+INPUT .\STAT3001 Notes.out
+INPUT STAT3001 Notes.out
+INPUT .\STAT3001 Notes.out
+INPUT STAT3001 Notes.out
+INPUT .\STAT3001 Notes.out
+INPUT STAT3001 Notes.out
 OUTPUT STAT3001 Notes.pdf
+INPUT .\STAT3001 Notes.out
+INPUT .\STAT3001 Notes.out
+OUTPUT STAT3001 Notes.out
 INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\tex\latex\pdflscape\pdflscape.sty
 INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\tex\latex\pdflscape\pdflscape.sty
 INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\tex\latex\pdflscape\pdflscape.sty
@@ -1352,33 +1379,11 @@ INPUT .\pre\uq.png
 INPUT .\pre\uq.png
 INPUT .\pre\uq.png
 INPUT .\pre\uq.png
-INPUT C:\Users\micha\AppData\Local\MiKTeX\pdftex\config\pdftex.map
-OUTPUT STAT3001 Notes.toc
-INPUT .\pre\preface.tex
-INPUT .\pre\preface.tex
-INPUT .\pre\preface.tex
-OUTPUT pre\preface.aux
-INPUT .\pre\preface.tex
-INPUT .\pre\preface.tex
-INPUT .\pre\preface.tex
-INPUT pre\preface.tex
-INPUT .\pre\preface.tex
-INPUT pre\preface.tex
-INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecrm1728.tfm
-INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecbx1728.tfm
-INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecti1200.tfm
+INPUT C:\Users\micha\AppData\Local\MiKTeX\fonts\map\pdftex\pdftex.map
+INPUT .\STAT3001 Notes.toc
+INPUT STAT3001 Notes.toc
+INPUT STAT3001 Notes.toc
 INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecbx1200.tfm
-INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecxc1200.tfm
-INPUT .\pt1 geoff\bkgdpointestimation.tex
-INPUT .\pt1 geoff\bkgdpointestimation.tex
-INPUT .\pt1 geoff\bkgdpointestimation.tex
-OUTPUT pt1 geoff\bkgdpointestimation.aux
-INPUT .\pt1 geoff\bkgdpointestimation.tex
-INPUT .\pt1 geoff\bkgdpointestimation.tex
-INPUT .\pt1 geoff\bkgdpointestimation.tex
-INPUT pt1 geoff\bkgdpointestimation.tex
-INPUT .\pt1 geoff\bkgdpointestimation.tex
-INPUT pt1 geoff\bkgdpointestimation.tex
 INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr8.tfm
 INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr6.tfm
 INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmmi12.tfm
@@ -1420,11 +1425,66 @@ INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\tex\latex\jknappen\ursfs.fd
 INPUT C:\Users\micha\AppData\Local\MiKTeX\fonts\tfm\public\rsfs\rsfs10.tfm
 INPUT C:\Users\micha\AppData\Local\MiKTeX\fonts\tfm\public\rsfs\rsfs10.tfm
 INPUT C:\Users\micha\AppData\Local\MiKTeX\fonts\tfm\public\rsfs\rsfs5.tfm
+INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecbx1440.tfm
+INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr12.tfm
+INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmmi12.tfm
+INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmsy10.tfm
+INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmex10.tfm
+INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
+INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam10.tfm
+INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam10.tfm
+INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam7.tfm
+INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
+INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
+INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm7.tfm
+INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx12.tfm
+INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx10.tfm
+INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx7.tfm
+INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmmib10.tfm
+INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmmib10.tfm
+INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmmib7.tfm
+INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbsy10.tfm
+INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbsy10.tfm
+INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmbsy7.tfm
+INPUT C:\Users\micha\AppData\Local\MiKTeX\fonts\tfm\public\rsfs\rsfs10.tfm
+INPUT C:\Users\micha\AppData\Local\MiKTeX\fonts\tfm\public\rsfs\rsfs10.tfm
+INPUT C:\Users\micha\AppData\Local\MiKTeX\fonts\tfm\public\rsfs\rsfs7.tfm
+OUTPUT STAT3001 Notes.toc
+INPUT .\pre\preface.tex
+INPUT .\pre\preface.tex
+INPUT .\pre\preface.tex
+OUTPUT pre\preface.aux
+INPUT .\pre\preface.tex
+INPUT .\pre\preface.tex
+INPUT .\pre\preface.tex
+INPUT pre\preface.tex
+INPUT .\pre\preface.tex
+INPUT pre\preface.tex
+INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecrm1728.tfm
+INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecbx1728.tfm
+INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecti1200.tfm
+INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecxc1200.tfm
+INPUT .\pt1 geoff\bkgdpointestimation.tex
+INPUT .\pt1 geoff\bkgdpointestimation.tex
+INPUT .\pt1 geoff\bkgdpointestimation.tex
+OUTPUT pt1 geoff\bkgdpointestimation.aux
+INPUT .\pt1 geoff\bkgdpointestimation.tex
+INPUT .\pt1 geoff\bkgdpointestimation.tex
+INPUT .\pt1 geoff\bkgdpointestimation.tex
+INPUT pt1 geoff\bkgdpointestimation.tex
+INPUT .\pt1 geoff\bkgdpointestimation.tex
+INPUT pt1 geoff\bkgdpointestimation.tex
 INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecrm0800.tfm
 INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecrm0600.tfm
 INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecrm1000.tfm
-INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecbx1000.tfm
-INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecbx1440.tfm
+INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecti1000.tfm
+INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
+INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam5.tfm
+INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm5.tfm
+INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx5.tfm
+INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmmib5.tfm
+INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmbsy5.tfm
+INPUT C:\Users\micha\AppData\Local\MiKTeX\fonts\tfm\public\rsfs\rsfs5.tfm
 INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecbi1200.tfm
 INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecti0800.tfm
 INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecti0600.tfm
@@ -1461,24 +1521,24 @@ INPUT STAT3001 Notes.run.xml
 OUTPUT STAT3001 Notes.run.xml
 INPUT C:\Users\micha\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecbi1200.pk
 INPUT C:\Users\micha\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecbi1200.pk
-INPUT C:\Users\micha\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1000.pk
-INPUT C:\Users\micha\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1000.pk
+INPUT C:\Users\micha\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecti1000.pk
+INPUT C:\Users\micha\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecti1000.pk
 INPUT C:\Users\micha\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1000.pk
 INPUT C:\Users\micha\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1000.pk
-INPUT C:\Users\micha\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1440.pk
-INPUT C:\Users\micha\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1440.pk
 INPUT C:\Users\micha\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm0800.pk
 INPUT C:\Users\micha\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm0800.pk
 INPUT C:\Users\micha\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecti1200.pk
 INPUT C:\Users\micha\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecti1200.pk
 INPUT C:\Users\micha\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecxc1200.pk
 INPUT C:\Users\micha\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecxc1200.pk
-INPUT C:\Users\micha\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1200.pk
-INPUT C:\Users\micha\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1200.pk
 INPUT C:\Users\micha\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1728.pk
 INPUT C:\Users\micha\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1728.pk
 INPUT C:\Users\micha\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1200.pk
 INPUT C:\Users\micha\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1200.pk
+INPUT C:\Users\micha\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1440.pk
+INPUT C:\Users\micha\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1440.pk
+INPUT C:\Users\micha\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1200.pk
+INPUT C:\Users\micha\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1200.pk
 INPUT C:\Users\micha\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1440.pk
 INPUT C:\Users\micha\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1440.pk
 INPUT C:\Users\micha\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm2074.pk

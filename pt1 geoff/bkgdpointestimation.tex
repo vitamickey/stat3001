@@ -167,11 +167,11 @@ It's worth noting that we don't care about the positive Hessian: the negative of
 Also, it's funny, because we don't have a name for this, but we do have a name for the mathematical object \(I(\hat{\bm{\theta}})\), where \(\hat{\bm{\theta}}\) is the ML estimate of \(\bm{\theta}\).
 
 \begin{definition}[Observed information matrix - multivariable]\label{defn:observed information matrix - multi}
-    When \(\bm{\theta}\) is a vector, I(\hat{\bm{\theta}}) is called the \textbf{observed information matrix}. 
+    When \(\bm{\theta}\) is a vector, \(I(\hat{\bm{\theta}})\) is called the \textbf{observed information matrix}. 
     More simply, it is the negative of the Hessian of the log likelihood function with the ML estimate substituted into it. 
 \end{definition}
 
-Anyway, given this and under regularity conditions (see section \ref{sec:reg conds I}), we have the following result which is technically a theorem and holds for distributions belonging to the regular exponential family (see section \ref{sec:reg exp fam}):
+Anyway, given this and under regularity conditions (see section the regularity conditions section below), we have the following result which is technically a theorem and holds for distributions belonging to the regular exponential family (see section \ref{sec:reg exp fam}):
 
 \begin{equation}\label{eq:thm about expected info as the expectation of I}
     \mathscr{I}(\bm{\theta}) = \mathbb{E}[I(\bm{\theta})]
