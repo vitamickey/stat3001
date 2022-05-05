@@ -1,6 +1,6 @@
-PWD c:\Users\micha\Dropbox (c'est pour l'école)\HOME\2022 S1\STAT3001 uni work\Notes\stat3001
+PWD c:\Users\micha\Google Drive\HOME\2022 S1\STAT3001\stat3001
 INPUT C:\Users\micha\AppData\Local\MiKTeX\miktex\data\le\pdftex\pdflatex.fmt
-INPUT c:\Users\micha\Dropbox (c'est pour l'école)\HOME\2022 S1\STAT3001 uni work\Notes\stat3001\STAT3001 Notes.tex
+INPUT c:\Users\micha\Google Drive\HOME\2022 S1\STAT3001\stat3001\STAT3001 Notes.tex
 OUTPUT STAT3001 Notes.log
 INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\tex\latex\base\report.cls
 INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\tex\latex\base\report.cls
@@ -1547,6 +1547,8 @@ INPUT C:\Users\micha\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecb
 INPUT C:\Users\micha\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx2074.pk
 INPUT C:\Users\micha\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx2488.pk
 INPUT C:\Users\micha\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx2488.pk
+INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmbsy10.pfb
+INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmbsy10.pfb
 INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmbx12.pfb
 INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmbx12.pfb
 INPUT C:\Users\micha\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmex10.pfb

@@ -4,20 +4,61 @@
 See section \ref{sec:reg exp fam} for definition of the regular exponential family. 
 It just gets repeated here by Geoff.
 
-% \bigskip
+\bigskip
 
-% We assume the \hyperref[sec:reg conds I]{regularity conditions} to make it easy for us to apply all of these wonderfully and almost-too-convenient results (previously mentioned \hyperref[not thm:reg conds I]{here} for the single variable case):
+We assume regularity conditions to make it easy for us to apply all of these wonderfully and almost-too-convenient results (previously mentioned \hyperref[sec:reg conds I]{here} for the single variable case):
 
-% \begin{theorem}[Score statistic equals zero]\label{thm:score stat equals zero} 
-%     \begin{equation}\label{eq:score stat equals zero}
-%         \frac{\partial \log L(\bm{\theta})}{\partial \bm{\theta}} = \bm{0}.
-%     \end{equation}
-% \end{theorem}
+\begin{theorem}[Score statistic equals zero]\label{thm:score stat equals zero} 
+    \begin{equation}\label{eq:score stat equals zero}
+        \frac{\partial \log L(\bm{\theta})}{\partial \bm{\theta}} = \bm{0}.
+    \end{equation}
+\end{theorem}
 
-% Note that \(\frac{\partial}{\partial \bm{\theta}}\) can be thought of as the differential operator \(\bm{\nabla}\), i.e. 
-% \[\frac{\partial}{\partial \bm{\theta}} = \bm{\nabla} = \left(\frac{\partial}{\partial \theta_1},...,\frac{\partial}{\partial \theta_d}\right)^T,\]
-% where \(d\) is the dimension of \bm{\theta} as stated in the definition of the regular exponential family. 
+Note that \(\frac{\partial}{\partial \bm{\theta}}\) can be thought of as the differential operator \(\bm{\nabla}\), i.e. 
+\[\frac{\partial}{\partial \bm{\theta}} = \bm{\nabla} = \left(\frac{\partial}{\partial \theta_1},...,\frac{\partial}{\partial \theta_d}\right)^T,\]
+where \(d\) is the dimension of \(\bm{\theta}\) as stated in the definition of the regular exponential family. 
 
-% \bigskip
+\bigskip
 
-% The proof hinges upon the idea that if have some function \(f\), in this case \(L(\bm{\theta})\), if the derivative \(f'\) is considered as \(\frac{f'\cdot f}{f}\), we can use the fact that \(\)
+The proof hinges upon the fact that \[\frac{\partial}{\partial\bm{\theta}} \log{L(\bm{\theta})} = \frac{\frac{\partial}{\partial\bm{\theta}} L(\bm{\theta})}{L(\bm{\theta})} \] by chain rule. 
+This can be rearranged to give \[\frac{\partial}{\partial\bm{\theta}} L(\bm{\theta}) = L(\bm{\theta}) \cdot \frac{\partial}{\partial\bm{\theta}} \log{L(\bm{\theta})}.\] 
+
+\bigskip
+
+The next result concerns methods for solving for an MLE. Typically, to find the MLE, you equate 
+\begin{equation}\label{eq:typical sol MLE}
+    \frac{\partial}{\partial\bm{\theta}} \log{L(\bm{\theta})} = \bm{0}.
+\end{equation}
+Since \(L(\bm{\theta})\) is in the reg. exp. fam, equation \ref{eq:typical sol MLE} can be rewritten as
+\begin{equation}\label{eq:reg exp MLE stuff 1}
+    \bm{T}(\bm{X}_1,...,\bm{X}_n) = \mathbb{E}_{\bm{\theta}} [\bm{T}(\bm{X}_1,...,\bm{X}_n)].
+\end{equation}
+So, the MLE of a regular exponential family satisfies
+\begin{equation}\label{eq:reg exp MLE stuff 2}
+    \bm{T}(\bm{X}_1,...,\bm{X}_n) = \mathbb{E}_{\hat{\bm{\theta}}} [\bm{T}(\bm{X}_1,...,\bm{X}_n)].
+\end{equation}
+
+This is useful because it makes it a lot easier to calculate MLEs since \(\bm{T}\) is given by the rearranged distribution. EZ money. 
+
+\bigskip
+
+The third result from these notes is that 
+
+\begin{equation}\label{eq:reg exp fam stuff 3}
+    I(\hat{\bm{\theta}}) = \mathscr{I}(\hat{\bm{\theta}})
+\end{equation}
+
+where 
+
+\begin{equation}\label{eq:reg exp fam stuff 3.1}
+    I(\hat{\bm{\theta}}) = -\frac{\partial^2 \log{L(\bm{\theta})}}{\partial\bm{\theta}^2}
+\end{equation}
+
+and
+
+\begin{equation}\label{eq:reg exp fam stuff 3.2}
+    \begin{split}
+        \mathscr{I}(\hat{\bm{\theta}}) &= \mathbb{E} \left[ \left(\frac{\partial \log{L(\bm{\theta})}}{\partial\bm{\theta}}\right)  \left(\frac{\partial \log{L(\bm{\theta})}}{\partial\bm{\theta}}\right)^T \right]\\
+        &= \text{Cov}\left(\frac{\partial \log{L(\bm{\theta})}}{\partial\bm{\theta}}\right).
+    \end{split}
+\end{equation}
