@@ -1,16 +1,16 @@
 [0] Config.pm:307> INFO - This is Biber 2.17
-[1] Config.pm:310> INFO - Logfile is 'STAT3001 Notes.blg'
-[321] biber-MSWIN64:340> INFO - === 
-[408] Biber.pm:418> INFO - Reading 'STAT3001 Notes.bcf'
-[937] Biber.pm:972> INFO - Found 5 citekeys in bib section 0
-[998] Biber.pm:4383> INFO - Processing section 0
-[1034] Biber.pm:4574> INFO - Looking for bibtex file 'refs.bib' for section 0
-[1161] bibtex.pm:1713> INFO - LaTeX decoding ...
-[1187] bibtex.pm:1518> INFO - Found BibTeX data source 'refs.bib'
-[1309] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'level = 4' with 'level = 2'
-[1309] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[1309] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[1309] Biber.pm:4203> INFO - Sorting list 'cms/global//global/global' of type 'entry' with template 'cms' and locale 'en-US'
-[1309] Biber.pm:4209> INFO - No sort tailoring available for locale 'en-US'
-[1322] bbl.pm:654> INFO - Writing 'STAT3001 Notes.bbl' with encoding 'UTF-8'
-[1326] bbl.pm:757> INFO - Output to STAT3001 Notes.bbl
+[0] Config.pm:310> INFO - Logfile is 'STAT3001 Notes.blg'
+[222] biber-MSWIN64:340> INFO - === 
+[321] Biber.pm:418> INFO - Reading 'STAT3001 Notes.bcf'
+[645] Biber.pm:972> INFO - Found 5 citekeys in bib section 0
+[689] Biber.pm:4383> INFO - Processing section 0
+[717] Biber.pm:4574> INFO - Looking for bibtex file 'refs.bib' for section 0
+[841] bibtex.pm:1713> INFO - LaTeX decoding ...
+[868] bibtex.pm:1518> INFO - Found BibTeX data source 'refs.bib'
+[1072] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[1072] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'level = 4' with 'level = 2'
+[1072] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[1072] Biber.pm:4203> INFO - Sorting list 'cms/global//global/global' of type 'entry' with template 'cms' and locale 'en-US'
+[1072] Biber.pm:4209> INFO - No sort tailoring available for locale 'en-US'
+[1082] bbl.pm:654> INFO - Writing 'STAT3001 Notes.bbl' with encoding 'UTF-8'
+[1086] bbl.pm:757> INFO - Output to STAT3001 Notes.bbl
